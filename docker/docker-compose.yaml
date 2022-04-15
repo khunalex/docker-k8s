@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+
+     itcombox:
+       image: alxfranc/itcombox:v1.0
+       ports:
+         - 4000:80
+       volumes:
+         - ./html:/usr/share/nginx/html/
+       restart: unless-stopped
+
+               #       enviroment:
+               #           MYSQL_HOST: mysql
+               #           MYSQL_USER: root
+               #           MYSQL_PASSWORD: secret
+               #           MYSQL_DB: database_name
+
+           #    mysql:
+           #        image: mysql:5.7
+           #        volumes:
+           #          - ./mysql-datat:/var/lib/mysql
+           #        enviroment:
+           #            MYSQL_ROOT_PASSWORD: secret
+           #            MYSQL_DATABASE: todos
